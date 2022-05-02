@@ -1,0 +1,51 @@
+<!--SISTEMA LOGIN E SENHA MIGUEL AZEVEDO TEODORO (ATIVIDADE INTESDISCIPLINAR - UNOPAR)-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>alert("Sistema de Login e Senha do Miguel Azevedo Teodoro")</script>
+    <title>Login</title>
+</head>
+<body style="background: gainsboro;">
+    <h1 style="text-align: center;">Sistema - Miguel Azevedo Teodoro</h1>
+    <!--inicio do form-->
+    <form style="padding: 50px">
+        
+        <h2>Login</h2>
+    <!--label e imput do usuário-->
+        <div style="padding: 10px">
+            <label for="Usuario">Usuario</label> <br>
+            <input style="padding: 2px;" type="text" id="Usuario" class="input-padrao" required
+                placeholder="Ex: Miguel.Azevedo">
+        </div>
+    <!--label e imput da senha-->
+        <div style="padding: 10px">
+            <label for="Usuario">Senha</label> <br>
+            <input style="padding: 2px;" type="password" name="senha" id="Senha" required placeholder="Senha">
+        </div>
+    <!--Botões-->
+        <div style="padding: 10px">
+            <button style="width: 80px" onclick=enviar()>Enviar</button>
+            <button style="width: 80px" onclick=limpar()>Cancelar</button>
+        </div>
+    </form>
+
+    <!--Scripts-->
+    <script>
+        function enviar() {
+            var usuario = (document.getElementById("Usuario").value);
+            var senha = (document.getElementById("Senha").value);
+            if (usuario !== "" && senha !== "") {
+                alert("Usuário Registrado");
+                limpar();
+            }
+        }
+        function limpar() {
+            document.getElementById("Usuario").value = ''
+            document.getElementById("Senha").value = ''
+        }
+    </script>
+    <!--Final do código-->
+</body>
+</html>
